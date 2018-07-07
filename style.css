@@ -1,0 +1,120 @@
+.flip3D {
+width: 240px;
+height: 200px;
+margin: 10px;
+float: left;
+text-align: center;
+color: darkblue;
+}
+
+.flip3D > .front { /* the > sign means all child divs of...*/
+position: absolute;
+transform: perspective( 600px ) rotateY( 0deg );
+background:#FC0; width:240px; height:200px; border-radius: 7px;
+backface-visibility: hidden;
+transition: transform .5s linear 0s;
+}
+
+
+.flip3D > .back {
+position: absolute;
+transform: perspective( 600px ) rotateY( 180deg );
+background: #DA70D6 ; width: 240px; height: 200px; border-radius: 7px;
+backface-visibility: hidden;
+transition: transform .5s linear 0s;
+}
+
+
+.flip3D:hover > .front{
+transform: perspective( 600px ) rotateY( -180deg );
+}
+.flip3D:hover > .back{
+transform: perspective( 600px ) rotateY( 0deg );
+}
+
+.flip { /*Created another class for the second set of divs, so I can style them different */
+width: 200px;
+height: 100px;
+margin: 10px;
+float: left;
+text-align: center;
+color: yellow;
+margin-left: 50px; /*this is the way is found to align it to center.. Must be a more elegant way.. */
+}
+
+.flip > .front {
+position: absolute;
+transform: perspective( 600px ) rotateY( 0deg );
+background: #800080; width:200px; height:100px; border-radius: 7px;
+backface-visibility: hidden;
+transition: transform .5s linear 0s;
+}
+
+
+
+.flip > .back {
+position: absolute;
+transform: perspective( 600px ) rotateY( 180deg );
+background: #DA70D6 ; width: 200px; height: 100px; border-radius: 7px;
+backface-visibility: hidden;
+transition: transform .5s linear 0s;
+}
+
+
+
+.flip:hover > .front{
+transform: perspective( 600px ) rotateY( -180deg );
+}
+.flip:hover > .back{
+transform: perspective( 600px ) rotateY( 0deg );
+}
+
+
+img { /*make the images of the flags fit perfectly in their boxes*/
+max-width:100%;
+max-height:100%;
+}
+
+div { /* Cannot make the text inside each box center...*/
+font-size: 30px;
+}
+
+
+h1 {
+font-size: 50px;
+text-align: center;
+color: Purple;
+text-shadow: 4px 4px MediumVioletRed;
+float: center;
+clear: left;
+}
+
+p {
+font-size: 20px;
+float: left;
+clear: both; /*doesn't allow anything floating to the left or right.. */
+}
+
+body {
+ margin-left: 170px; /*same - centering issue.. find a solution to this... */
+}
+
+html {
+background: thistle;
+padding-bottom: 100px;
+}
+
+h2 {
+font-size: 50px;
+text-align: center;
+color: red;
+text-shadow: 4px 4px purple;
+float: center;
+clear: left;
+}
+
+#text {
+float: inherit;
+clear: both;
+}
+
